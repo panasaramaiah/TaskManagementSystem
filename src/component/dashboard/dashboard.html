@@ -1,0 +1,21 @@
+<p>Total Tasks: {{ lstTaskDetails.length }}</p>
+<table style="border-collapse: collapse; width: 100%;border: 1px solid black;">
+  <tr style="border: 1px solid black;">
+    <th style="border: 1px solid black;">Title</th>
+    <th style="border: 1px solid black;">Description</th>
+    <th style="border: 1px solid black;">Status</th>
+    <th style="border: 1px solid black;">Assigned To</th>
+    <th style="border: 1px solid black;">Due Date</th>
+  </tr>
+  <tr style="border: 1px solid black;" *ngFor="let task of lstTaskDetails">
+    <td style="border: 1px solid black;">{{ task.title }}</td>
+    <td style="border: 1px solid black;">{{ task.description }}</td>
+    <td style="border: 1px solid black;">{{ task.status }}</td>
+    <td style="border: 1px solid black;">{{ task.assignedTo }}</td>
+    <td style="border: 1px solid black;">{{ task.dueDate | date:'dd-MM-yyyy' }}</td>
+    <td>
+      <button (click)="editTask(task.id)">Edit</button>
+    </td>
+  </tr>
+</table>
+<input type="button" value="Add Task" (click)="addTask()">

@@ -1,0 +1,8 @@
+
+<p style="font-weight: bold; font-size: 25px;">Name: {{ profile.name }}</p>
+<p>Email: {{ profile.email }}</p>
+<p>Role: {{ profile.role }}</p>     
+<p>Score: {{ profile.score }}</p>
+<p>Active: {{ profile.isActive ? 'Yes' : 'No' }}</p>
+
+<input type="button" value="Edit Profile" (click)="editProfile(profile.id)">
