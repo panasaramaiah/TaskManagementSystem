@@ -24,3 +24,12 @@ jobs:
 
     - name: Build Angular
       run: npm run build
+    
+    - name: Build Angular
+      run: npm run build -- --base-href "/TaskManagementSystem/"
+    - name: Show Build Output
+      run: |
+        pwd
+        ls -R
+        ls -R dist || true   
+    
